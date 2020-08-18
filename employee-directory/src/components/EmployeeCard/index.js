@@ -13,6 +13,9 @@ function EmployeeCard(props) {
             <strong>Name:</strong> {props.name}
           </li>
           <li>
+            <strong>Id:</strong> {props.id}
+          </li>
+          <li>
             <strong>Department:</strong> {props.department}
           </li>
           <li>

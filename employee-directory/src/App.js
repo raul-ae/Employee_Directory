@@ -61,6 +61,8 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <div className="row">
+        <div className="column">
         <Title>Employees List</Title>
         <Sort
          sortEmployee={this.sortEmployee}
@@ -68,18 +70,24 @@ class App extends Component {
         <Filter
         filterEmployee={this.filterEmployee}
         />
+        </div>
+        </div>
+        
+         <div className="row">
+
         {this.state.employees.map(employee => (
           <EmployeeCard
-           
-            removeEmployee={this.removeEmployee}
-            id={employee.id}
-            key={employee.id}
-            name={employee.name}
-            image={employee.image}
-            department={employee.department}
-            email={employee.email}
+          
+          removeEmployee={this.removeEmployee}
+          id={employee.id}
+          key={employee.id}
+          name={employee.name}
+          image={employee.image}
+          department={employee.department}
+          email={employee.email}
           />
-        ))}
+          ))}
+          </div>
       </Wrapper>
     );
   }

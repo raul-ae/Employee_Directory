@@ -1,13 +1,14 @@
 import React from "react";
-// import "./style.css";
+import "./style.css";
 
 function Sort(props) {
   return (
-    <div>
-
+    <div className="col">
+      <div className="row">
    <button className="buttonDesc" onClick={() => props.sortEmployee()} >
      Sort Desc
    </button>
+    </div>
     </div>
    );
 }

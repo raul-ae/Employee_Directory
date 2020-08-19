@@ -3,8 +3,8 @@ import React from "react";
 
 function Filter(props) {
   return (
-    <div>
-
+      <div className="col">
+      <div className="row">
     <label>Filter by Department:</label>
 
     <select id="myFilter">
@@ -18,6 +18,7 @@ function Filter(props) {
     <button className="filter" onClick={() => props.filterEmployee(document.getElementById("myFilter").value)} >
      Filter
    </button>
+    </div>
     </div>
    );
 }

@@ -51,7 +51,9 @@ class App extends Component {
   };
 
   filterEmployee = department => {
-
+    console.log("filtering by: ", department)
+   
+    const employees = this.state.employees.filter(employee => employee.department === department);
     this.setState({ employees });
   };
 
@@ -63,7 +65,9 @@ class App extends Component {
         <Sort
          sortEmployee={this.sortEmployee}
          />
-        <Filter/>
+        <Filter
+        filterEmployee={this.filterEmployee}
+        />
         {this.state.employees.map(employee => (
           <EmployeeCard
            

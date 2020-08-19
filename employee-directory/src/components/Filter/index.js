@@ -3,7 +3,22 @@ import React from "react";
 
 function Filter(props) {
   return (
-   <h1 className="Sort by ID Desc">{props.children}</h1>
+    <div>
+
+    <label>Filter by Department:</label>
+
+    <select id="myFilter">
+      <option value="Marketing">Marketing</option>
+      <option value="Sales">Sales</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Finance">Finance</option>
+      <option value="CEO">CEO</option>
+    </select>
+    {/* {console.log(document.getElementById("myFilter").value)} */}
+    <button className="filter" onClick={() => props.filterEmployee(document.getElementById("myFilter").value)} >
+     Filter
+   </button>
+    </div>
    );
 }
 
